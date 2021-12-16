@@ -10,10 +10,11 @@ import Foundation
 func main() {
     let n = Int(readLine()!)!
     let m = Int(readLine()!)!
-    let button = readLine()!.split(separator: " ").map { Int($0)! }
-    
     var breakdown = Array(repeating: false, count: 11)
-    for i in button { breakdown[i] = true }
+    if m != 0 {
+        let button = readLine()!.split(separator: " ").map { Int($0)! }
+        for i in button { breakdown[i] = true }
+    }
     
     var answer = abs(n - 100)
     
